@@ -1,0 +1,5 @@
+pytest==8.3.3
+requests==2.32.3
+Faker==30.8.2
+pytest-html-reporter==0.2.9
+pytest-steps==1.8.0
