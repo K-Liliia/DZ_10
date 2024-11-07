@@ -23,7 +23,7 @@ jobs:
             pytest tests/ --html-report=./report/report.html
       - store_artifacts:
           path: report.html
-          destination: python-report
+          destination: report
 
 workflows:
   build-and-test:
