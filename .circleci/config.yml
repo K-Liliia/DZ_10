@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/python:3.10.1-node-browsers
 
-    working_directory: /new
+    working_directory: /tests
     steps:
       - checkout
       - run:
@@ -26,14 +26,13 @@ jobs:
       - run:
           name: Creating Dummy Artifacts
           command: |
-            echo "my artifact file" > /new/artifact-1;
-            mkdir /new/artifacts;
-            echo "my artifact files in a dir" > /new/artifacts/artifact-2;
+            echo "my artifact file" > /tests/test_lists.py;
+            echo "my artifact files in a dir" > /result/artifacts/artifact-2;
       - store_artifacts:
           path: report.html
           destination: report
       - store_artifacts:
-          path: /new/artifact-1
+          path: /tests/test_lists.py
           destination: artifact-file
 
 workflows:
